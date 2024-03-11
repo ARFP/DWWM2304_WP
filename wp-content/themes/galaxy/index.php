@@ -17,7 +17,7 @@ if( have_posts() ) :
                 <!-- ou <h2><?php echo get_the_title(); ?></h2> -->
                 <aside>Dans <?php the_category(', ') ?></aside>
                 <aside><?php the_date() ?> <?php the_time() ?></aside>
-                <aside><?php the_author_link() ?></aside>
+                <aside><?php the_author_link(); ?></aside>
             </header>
             <div>
                 <?php the_content(); ?>
