@@ -8,3 +8,9 @@ function registerMyMenu() {
 }
 
 add_action('after_setup_theme', 'registerMyMenu');
+
+
+register_sidebar([
+    'id' => 'blog-sidebar',
+    'name' => 'Blog',
+]);

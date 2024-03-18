@@ -25,6 +25,8 @@ if( have_posts() ) :
         </article>
 <?php   
     endwhile;
+else :
+    echo 'Erreur 404 : Aucun contenu à afficher' ;
 endif;
 ?>
 </section>
