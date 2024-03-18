@@ -3,31 +3,27 @@
 get_header();
 ?>
 
-<section class="post-list">
+<section class="main-section">
 
 <?php
 
 if( have_posts() ) : 
     while( have_posts() ) :
+
         the_post();
-        ?>
+?>
         <article class="post">
             <header>
                 <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2> 
-                <!-- ou <h2><?php echo get_the_title(); ?></h2> -->
+                <aside><?php the_author_link(); ?>, le <?=get_the_date() ?> à <?php the_time() ?></aside>
                 <aside>Dans <?php the_category(', ') ?></aside>
-                <aside><?php the_date() ?> <?php the_time() ?></aside>
-                <aside><?php the_author_link(); ?></aside>
             </header>
-            <div>
-                <?php the_content(); ?>
+            <div class="post-content">
+                <?php the_excerpt(); ?> 
+                <a href="<?php the_permalink() ?>">Lire la suite</a>
             </div>
-
         </article>
-        <?php
-
-       
-
+<?php   
     endwhile;
 endif;
 ?>
