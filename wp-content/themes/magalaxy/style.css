@@ -41,11 +41,15 @@ a:hover {
     color: var(--color2)
 }
 
+h1 {
+    width: 100%;
+}
+
 main {
     width: 90%;
     margin: auto;
     display:flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 
@@ -68,6 +72,10 @@ main {
     width: 32%;
     min-width: 36rem;
     box-shadow: 0 0 2px 0 var(--color2);
+}
+
+.post.full, main-section.full {
+    width: 100%;
 }
 
 .post h2 {
