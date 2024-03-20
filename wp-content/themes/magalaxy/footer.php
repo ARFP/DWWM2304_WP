@@ -1,3 +1,4 @@
+</div>
 <aside class="main-aside">
     <?php dynamic_sidebar('blog-sidebar'); ?>
 </aside>

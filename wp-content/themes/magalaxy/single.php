@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<h1>single.php</h1>
-
 <section class="main-section">
+
+<h1>single.php <?php the_category(', ', '', $post->ID ); ?></h1>
 
 <?php
 
@@ -20,6 +20,19 @@ if( have_posts() ) :
             <div class="post-content">
                 <?php the_content(); ?> 
             </div>
+            <footer>
+                <h2>Auteur</h2>
+                <div id="author-info">
+                    <div id="author-avatar" style="display: flex;">
+                    <?php echo get_avatar( get_the_author_meta('user_email'), '80', '' ); ?>
+                    <h3><a href="<?php the_author_meta('user_url'); ?>"><?php the_author_meta('nickname'); ?></a></h3>
+                    </div>
+                    <div id="author-description">
+                    
+                    <?php the_author_meta('description'); ?>
+                    </div>
+                </div>
+            </footer>
         </article>
 <?php   
     endwhile;

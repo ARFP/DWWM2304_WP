@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 
-<h1>page.php</h1>
-
 <section class="main-section">
+
+<h1>page.php</h1>
 
 <?php
 

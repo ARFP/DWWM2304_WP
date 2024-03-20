@@ -43,14 +43,18 @@ a:hover {
 
 h1 {
     width: 100%;
+    margin: 0;
+    padding: 1rem;
+    background-color: var(--colorhv);
 }
 
 main {
     width: 90%;
     margin: auto;
     display:flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-around;
+    gap: .5rem;
 }
 
 .main-aside {
@@ -65,6 +69,10 @@ main {
     display:flex;
     flex-flow: row wrap;
     gap: 1rem;
+}
+
+.main-section.home {
+    margin-bottom: 2rem;
 }
 
 .post {
@@ -111,6 +119,10 @@ main {
     padding: 1rem;
     color: var(--color1);
 }
+.galaxy-menu a:hover {
+    text-decoration: none;
+    background-color: var(--colorhv);
+}
 
 .galaxy-menu li ul {
     display: none;
@@ -123,4 +135,11 @@ main {
 
 .galaxy-menu li:hover ul {
     display: block;
+}
+
+body > footer {
+    margin-top: 5rem;
+    padding: 1rem;
+    min-height: 10rem;
+    background-color: var(--colorhv);
 }

@@ -1,8 +1,7 @@
 <?php get_header(); ?>
 
-<h1>front-page.php</h1>
-
-<section class="main-section full">
+<section class="main-section full home">
+    <h1>Bienvenue</h1>
 
 <?php
 
@@ -12,11 +11,6 @@ if( have_posts() ) :
         the_post();
 ?>
         <article class="post full">
-            <header>
-                <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2> 
-                <aside><?php the_author_link(); ?>, le <?=get_the_date() ?> à <?php the_time() ?></aside>
-                <aside>Dans <?php the_category(', ') ?></aside>
-            </header>
             <div class="post-content">
                 <?php the_content(); ?> 
             </div>
@@ -30,7 +24,7 @@ endif;
 </section>
 
 <section class="main-section full">
-
+    <h1>Derniers articles publiés</h1>
 <?php
 
 $args = [
@@ -45,7 +39,7 @@ if($query->have_posts()) :
         $query->the_post();
 
         ?>
-        <article class="post full">
+        <article class="post">
             <header>
                 <h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2> 
                 <aside><?php the_author_link(); ?>, le <?=get_the_date() ?> à <?php the_time() ?></aside>
