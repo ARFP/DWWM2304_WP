@@ -4,7 +4,8 @@
 </aside>
 </main>
 <footer>
-    <?php wp_footer(); ?>
+    Copyright <?=date('Y'); ?> Mickaël DEVOLDÈRE 
 </footer>
+    <?php wp_footer(); ?>
 </body>
 </html>

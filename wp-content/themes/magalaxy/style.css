@@ -49,10 +49,10 @@ h1 {
 }
 
 main {
-    width: 90%;
+    width: 95%;
     margin: auto;
     display:flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     gap: .5rem;
 }
@@ -63,22 +63,37 @@ main {
     background-color: var(--color4);
 }
 
+@media screen and (max-width:1200px) {
+    .main-aside {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:782px) {
+    html {
+        margin-top: 0 !important;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #wpadminbar {
+        position: fixed;
+        width: 100%;
+    }
+}
+
 .main-section {
-    width: 1440px;
+    width: 120rem;
     max-width: 100%;
     display:flex;
     flex-flow: row wrap;
     gap: 1rem;
-}
-
-.main-section.home {
     margin-bottom: 2rem;
 }
 
 .post {
     background-color: var(--color1);
-    width: 32%;
-    min-width: 36rem;
+    width: 39.3rem;
     box-shadow: 0 0 2px 0 var(--color2);
 }
 
@@ -106,19 +121,26 @@ main {
     text-align: justify;
 }
 
+body > header {
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+    top: var(--wp-admin--admin-bar--height);
+}
+
 .galaxy-menu {
+    margin: 0;
+    padding: 0;
     display: flex;
     list-style: none;
-    z-index: 100;
-    position: sticky;
     background: var(--color2);
-    padding: 0;
 }
 
 .galaxy-menu a {
     padding: 1rem;
     color: var(--color1);
 }
+
 .galaxy-menu a:hover {
     text-decoration: none;
     background-color: var(--colorhv);
@@ -138,6 +160,7 @@ main {
 }
 
 body > footer {
+    width: 100%;
     margin-top: 5rem;
     padding: 1rem;
     min-height: 10rem;

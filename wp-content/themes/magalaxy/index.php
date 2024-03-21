@@ -1,14 +1,21 @@
-<?php get_header(); ?>
+<?php 
+/*
+index.php
+C'est le template par défaut qu'utilisera Wordpress si le template spécifique au contexte n'existe pas.
+*/
+
+// Inclusion du fichier 'header.php' présent dans le dossier du thème courant
+get_header(); ?>
 
 <section class="main-section">
 <h1>index.php</h1>
 
 <?php
 
-if( have_posts() ) : 
-    while( have_posts() ) :
+if( have_posts() ) : // Si du contenu existe pour le contexte actuel (le contexte est défini par l'URL)
+    while( have_posts() ) : // Tant qu'il y a du contenu à afficher
 
-        the_post();
+        the_post(); // Chargement du contenu à afficher
 ?>
         <article class="post">
             <header>
@@ -23,10 +30,14 @@ if( have_posts() ) :
         </article>
 <?php   
     endwhile;
-else :
+    // Pagination (précédent, suivant).
+    the_posts_pagination();
+else : // Si aucun contenu à afficher
     echo 'Erreur 404 : Aucun contenu à afficher' ;
 endif;
 ?>
 </section>
 
-<?php get_footer();
+<?php 
+// Inclusion du fichier 'footer.php' présent dans le dossier du thème courant
+get_footer();

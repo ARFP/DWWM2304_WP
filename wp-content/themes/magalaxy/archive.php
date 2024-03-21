@@ -23,6 +23,8 @@ if( have_posts() ) :
         </article>
 <?php   
     endwhile;
+    // Pagination (précédent, suivant).
+    the_posts_pagination();
 else :
     echo 'Erreur 404 : Aucun contenu à afficher' ;
 endif;
