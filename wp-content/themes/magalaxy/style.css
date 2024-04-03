@@ -61,6 +61,7 @@ main {
     width: 35rem;
     min-width: 35rem;
     background-color: var(--color4);
+    margin-top: 6rem;
 }
 
 @media screen and (max-width:1200px) {

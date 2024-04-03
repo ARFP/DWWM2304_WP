@@ -26,8 +26,24 @@ function registerMyMenu() {
 /** Enregistre le ou les menus déclarés dans la fonction registerMyMenu */
 add_action('after_setup_theme', 'registerMyMenu');
 
+
 /** Déclare une "sidebar" configurable dans le back-office (Apparence->widgets) */
+
 register_sidebar([
     'id' => 'blog-sidebar',
     'name' => 'Blog',
+    'before_widget' => '<section>',
+    'after_widget' => '</section>',
+    'before_title' => '<h2>',
+    'after_title' => '</h2>'
 ]);
+
+
+
+/** Crée un shortcode réutilisable dans les articles, pages etc... */
+
+function myName() {
+    return 'Mickaël Dev';
+}
+
+add_shortcode('monnom', 'myName');
